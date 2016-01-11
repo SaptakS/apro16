@@ -1,0 +1,139 @@
+#contact{
+	background: url("../images/Contact/hud2.png") center center no-repeat;
+	background-size: 100% auto;
+}
+
+.contacts{
+	position: absolute;
+	width: 100%;
+	height: 75%;
+	top: 10%;
+	left: 0;
+	/*border: 1px solid white;*/
+}
+
+.contacts ul.contact-list{
+	position: relative;
+	list-style: none;
+	width: 80%;
+	min-width: 640px;
+	opacity: 0;
+	margin: 0 auto;
+	height: calc(100%);
+	/*border: 1px solid white;*/
+}
+
+.contacts ul.contact-list li.group{
+	position: absolute;
+	visibility: hidden;
+	opacity: 0;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: visibility 0.1s,opacity 2s;
+}
+
+.contacts ul.contact-list li.group.on{
+	visibility: visible;
+	opacity: 1;
+}
+
+li.group div.contact-card{
+	display: inline-block;
+	width: 300px;
+	height: 90%;
+	margin: 2% 4%;
+	/*border: 1px solid red;*/
+}
+
+li.group .contact-card span{
+	display: block;
+	margin: 0px auto 10px auto;
+	width: 100%;
+}
+
+li.group .contact-card .contact-pic{
+	position: relative;
+	width: 74%;
+	height: 70%;
+	margin: 10px auto 10px auto;
+}
+
+li.group .contact-card .contact-pic:before {
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	opacity: 1;
+	background-color: rgba(0,0,0,1);
+	animation : load 1s forwards;
+	/*animation-delay: 10s;*/
+}
+
+@keyframes load{
+	0%{ opacity: 1}
+	100%{ opacity: 0}
+}
+
+li.group .contact-card .contact-pic img {
+	position: relative;
+	display: block;
+	height: 100%;
+	z-index: 9;
+	width: 100%;
+}
+
+li.group .contact-card .contact-details{
+	font-family: "Intro";
+	font-size: 18px;
+	letter-spacing: -1px;
+	color: white;
+}
+
+
+div.contacts span.group-control{
+	position: absolute;
+	/*top: calc(85% - 50px);*/
+	bottom: 27%;
+	width: 75px;
+	height: 75px;
+	cursor: pointer;
+	z-index: 3;
+	text-align: center;
+	color: rgba(255,255,255,0.9);
+	font-family: "Intro";
+	font-size: 12px;
+	line-height: 75px;
+	transition : all 1s cubic-bezier(1,0,0,1);
+}
+
+div.contacts .group-control.prev{
+	left: 43px;
+	background: url("../images/Contact/control3.png") center center no-repeat;
+	background-size: auto 75px;
+}
+
+div.contacts .group-control.next{
+	left:calc( 100% - 112px);
+	background: url("../images/Contact/control3mirror.png") center center no-repeat;
+	background-size: auto 75px;
+	text-indent: 15px;
+}
+
+.section-title{
+	position: absolute; 
+	width: 100%;
+	display:block;
+	font-size: 26px;
+	text-indent: 25px;
+	bottom: 38px;
+	left: 0px;
+	text-align: center;
+	color:#787F7F;
+	font-family: 'Intro';
+}

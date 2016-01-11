@@ -7,6 +7,7 @@
     <!-- CSS -->
     <link href="css/animation.css" rel="stylesheet" media="screen">
     <link href="css/style.css" rel="stylesheet" media="screen">
+    <link href="css/contact.css" rel="stylesheet" media="screen">
 
     <!-- mobile -->
     <meta name="viewport" content="initial-scale=1.0">
@@ -124,13 +125,100 @@
             </div>
 
             <div class="shadow-law"></div>
-            <article class="article-law">
+            <!-- <article class="article-law">
                 <h1>Contact</h1>
                 <p>Un <span class="text-robot">robot</span> <span class="text-design"></span> doit obéir aux ordres que lui donne un
                 <br class="desk-only">être humain, sauf si de tels ordres entrent
                 <br class="desk-only">en conflit avec la Première loi.</p>
-            </article>
-        </section>       
+            </article> -->
+
+            <div class = "contacts">
+                <ul class = "contact-list">
+
+                    <li class = "group on">
+                        <div class = "contact-card">
+                            <span class = "contact-pic asd"><img src = "images/Contact/contact.jpg" /></span>
+                            <span class = "contact-details"><p>HEAD ORGANIZER</p></span>
+                            <span class = "contact-details"><p>ABCD WXYZ</p></span>
+                            <span class = "contact-details"><p>90239409342,</p><p>abcd@124.com</p></span>
+                        </div>
+                        <div class = "contact-card">
+                            <span class = "contact-pic"><img src = "images/Contact/contact.jpg" /></span>
+                            <span class = "contact-details"><p>HEAD ORGANIZER</p></span>
+                            <span class = "contact-details"><p>ABCD WXYZ</p></span>
+                            <span class = "contact-details"><p>90239409342,</p><p>abcd@124.com</p></span>
+                        </div>
+                    </li>
+
+                    <li class = "group">
+                        <div class = "contact-card">
+                            <span class = "contact-pic"><img src = "images/Contact/contact.jpg" /></span>
+                            <span class = "contact-details"><p>HEAD ORGANIZER</p></span>
+                            <span class = "contact-details"><p>ABCD WXYZ</p></span>
+                            <span class = "contact-details"><p>90239409342,</p><p>abcd@124.com</p></span>
+                        </div>
+                        <div class = "contact-card">
+                            <span class = "contact-pic"><img src = "images/Contact/contact.jpg" /></span>
+                            <span class = "contact-details"><p>HEAD ORGANIZER</p></span>
+                            <span class = "contact-details"><p>ABCD WXYZ</p></span>
+                            <span class = "contact-details"><p>90239409342,</p><p>abcd@124.com</p></span>
+                        </div>
+                    </li>
+
+                    <li class = "group">
+                        <div class = "contact-card">
+                            <span class = "contact-pic"><img src = "images/Contact/contact.jpg" /></span>
+                            <span class = "contact-details"><p>HEAD ORGANIZER</p></span>
+                            <span class = "contact-details"><p>ABCD WXYZ</p></span>
+                            <span class = "contact-details"><p>90239409342,</p><p>abcd@124.com</p></span>
+                        </div>
+                        <div class = "contact-card">
+                            <span class = "contact-pic"><img src = "images/Contact/contact.jpg" /></span>
+                            <span class = "contact-details"><p>HEAD ORGANIZER</p></span>
+                            <span class = "contact-details"><p>ABCD WXYZ</p></span>
+                            <span class = "contact-details"><p>90239409342,</p><p>abcd@124.com</p></span>
+                        </div>
+                    </li>
+
+                    <li class = "group">
+                        <div class = "contact-card">
+                            <span class = "contact-pic"><img src = "images/Contact/contact.jpg" /></span>
+                            <span class = "contact-details"><p>HEAD ORGANIZER</p></span>
+                            <span class = "contact-details"><p>ABCD WXYZ</p></span>
+                            <span class = "contact-details"><p>90239409342,</p><p>abcd@124.com</p></span>
+                        </div>
+                        <div class = "contact-card">
+                            <span class = "contact-pic"><img src = "images/Contact/contact.jpg" /></span>
+                            <span class = "contact-details"><p>HEAD ORGANIZER</p></span>
+                            <span class = "contact-details"><p>ABCD WXYZ</p></span>
+                            <span class = "contact-details"><p>90239409342,</p><p>abcd@124.com</p></span>
+                        </div>
+                    </li>
+              
+                </ul>
+                <span class = "group-control prev">PREVIOUS</span>
+                <span class = "group-control next">NEXT</span>
+            </div>
+            <h1 class = "section-title">Contacts</h1>
+        </section>
+
+
+        <!-- <li class = "group">
+                        <ul class = "inner-list">
+                            <li>
+                                <span class = "contact-pic ass"><img src = "images/Contact/contact.jpg" /></span>
+                                <span class = "contact-details"><p>HEAD ORGANIZER</p></span>
+                                <span class = "contact-details"><p>ABCD WXYZ</p></span>
+                                <span class = "contact-details"><p>90239409342,<br>abcd@124.com</p></span>
+                            </li>
+                            <li>
+                                <span class = "contact-pic"><img src = "images/Contact/contact.jpg"/></span>
+                                <span class = "contact-details"><p>HEAD ORGANIZER</p></span>
+                                <span class = "contact-details"><p>ABCD WXYZ</p></span>
+                                <span class = "contact-details"><p>90239409342;<br>abcd@124.com</p></span>
+                            </li>
+                        </ul>
+                    </li> -->
 
         <!-- 4 -->
         <!--
@@ -255,6 +343,61 @@
     <script src='js/jquery.scrollTo-min.js'></script>
     <script src='js/jquery.localscroll-min.js'></script>
     <script src="js/main.js"></script>
+    <script src="js/jquery.imageTile.js"></script>
+    <script>
+   
+    var contactsLoaded = false;
+    $("ul.contact-list").css({"opacity": "0"});    
+    window.onscroll = function(){
+        if(contactsLoaded == false){
+            if(window.pageYOffset > 2.1 * window.innerHeight){
+                $("ul.contact-list").fadeTo(2000,"1");
+                $("li.on span.contact-pic img").imageTiles().parent().parent().find("span.contact-details p").hide().delay(1200).promise().done(function(){
+                        $(this).show().shuffleLetters();
+                    });
+                contactsLoaded = true;
+            }
+        }
+    }
 
+    // setTimeout(function(){
+    //     $("li.on span.contact-pic img").imageTiles().parent().parent().find("span.contact-details p").hide().delay(1200).promise().done(function(){
+    //                     $(this).show().shuffleLetters();
+    //                 });
+    // },3000);
+
+    $li = $("ul.contact-list li");
+    $nextCard = $("div.contacts span.group-control.next");
+    $prevCard = $("div.contacts span.group-control.prev");
+
+    $nextCard.on("click",function(){
+        $liToOff = $("ul.contact-list li.on");
+        if(!$liToOff.is(":last-child")){
+            $liToOff.removeClass("on");
+            $liToOff.next().addClass("on");
+
+            $liToOff.next().promise().done(function(){
+                $(this).find("span.contact-pic img").imageTiles().parent().parent().find("span.contact-details p").hide().delay(1200).promise().done(function(){
+                        $(this).show().shuffleLetters();
+                    });
+            });
+        }        
+    });
+
+    $prevCard.on("click",function(){
+        $liToOff = $("ul.contact-list li.on");
+        if(!$liToOff.is(":first-child")){
+            $liToOff.removeClass("on");
+            $liToOff.prev().addClass("on");
+
+            $liToOff.prev().promise().done(function(){
+                $(this).find("span.contact-pic img").imageTiles().parent().parent().find("span.contact-details p").hide().delay(1200).promise().done(function(){
+                        $(this).show().shuffleLetters();
+                    });
+            });
+        }        
+    });
+
+    </script>
 </body>
 </html>
