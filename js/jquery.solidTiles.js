@@ -1,13 +1,11 @@
 (function($) {
 
-	$.fn.imageTiles = function(opts){
+	$.fn.solidTiles = function(opts){
 
 		var options = $.extend({
 			rows: 6,
 			cols: 5,
-			animationTime: 400,
 			className: "jquery_tile_div",
-			maxOpacity: 1
 		},opts);
 
 		var tileWidth = this.width()/options.cols;

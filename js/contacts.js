@@ -1,10 +1,13 @@
 $(document).ready(function(){    
     var contactsLoaded = false;
-    
+    $li = $("ul.contact-list li");
+    $next = $("div.contacts span.group-control.next");
+    $prev = $("div.contacts span.group-control.prev");
+
     $(window).on("scroll",function(){
         if(contactsLoaded == false){
             if(window.pageYOffset > 2.1 * window.innerHeight){
-                $("li.on span.contact-pic img").imageTiles().parent().parent().find("span.contact-details p").hide().delay(1200).promise().done(function(){
+                $("li.on span.contact-pic img").solidTiles().parent().parent().find("span.contact-details p").hide().delay(1200).promise().done(function(){
                         $(this).show().shuffleLetters();
                     });
                 contactsLoaded = true;
@@ -12,15 +15,9 @@ $(document).ready(function(){
         }
     });
 
-    $li = $("ul.contact-list li");
-    $next = $("div.contacts span.group-control.next");
-    $prev = $("div.contacts span.group-control.prev");
-
-    (function(){
-        $prev.hide();
-        nextContacts = $("ul.contact-list li.on").attr("data-next");
-        $next.find("p").text(nextContacts);
-    })();
+    $prev.hide();
+    nextContacts = $("ul.contact-list li.on").attr("data-next");
+    $next.find("p").text(nextContacts);
 
     $next.on("click",function(){
         $liToOff = $("ul.contact-list li.on");
@@ -36,7 +33,7 @@ $(document).ready(function(){
             $next.find("p").text(nextContacts);
             
             $liToOff.next().promise().done(function(){
-                $(this).find("span.contact-pic img").imageTiles().parent().parent().find("span.contact-details p").hide().delay(1200).promise().done(function(){
+                $(this).find("span.contact-pic img").solidTiles().parent().parent().find("span.contact-details p").hide().delay(1200).promise().done(function(){
                         $(this).show().shuffleLetters();
                     });
             });
@@ -62,7 +59,7 @@ $(document).ready(function(){
                 $prev.find("p").text(prevContacts);
                 
                 $liToOff.prev().promise().done(function(){
-                    $(this).find("span.contact-pic img").imageTiles().parent().parent().find("span.contact-details p").hide().delay(1200).promise().done(function(){
+                    $(this).find("span.contact-pic img").solidTiles().parent().parent().find("span.contact-details p").hide().delay(1200).promise().done(function(){
                             $(this).show().shuffleLetters();
                         });
                 });  
