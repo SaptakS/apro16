@@ -368,9 +368,7 @@ div.contacts span.group-control.next p{
 	}
 
 	li.group .contact-card .contact-details{
-		font-family: "Intro";
 		font-size: 12px;
-		font-weight: bold;
 	}
 
 	div.contacts span.group-control{
@@ -412,8 +410,6 @@ div.contacts span.group-control.next p{
 	}
 
 	li.group .contact-card .contact-details{
-		font-family: "Intro";
 		font-size: 10px;
-		font-weight: bold;
 	}
 }
