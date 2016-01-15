@@ -1,51 +1,22 @@
 (function($) {
 
-	$.fn.imageTiles = function(opts){
+	$.fn.solidTiles = function(opts){
 
 		var options = $.extend({
-			rows: 5,
+			rows: 6,
 			cols: 5,
-			animationTime: 400,
 			className: "jquery_tile_div",
-			maxOpacity: 1
 		},opts);
 
 		var tileWidth = this.width()/options.cols;
 		var tileHeight = this.height()/options.rows;
 
-		// var tileCSS = [
-		// {
-		// 	"background-color" : "#022129",
-		// 	"height": tileHeight,
-		// 	"width": tileWidth,
-		// 	"float": "left",
-		// 	"opacity": "1",
-		// 	"transition": "opacity 0.2s"
-		// },
-		// {
-		// 	"background-color" : "#025050",
-		// 	"height": tileHeight,
-		// 	"width": tileWidth,
-		// 	"float": "left",
-		// 	"opacity": "1",
-		// 	"transition": "opacity 0.2s"
-		// },
-		// {
-		// 	"background-color" : "#040401",
-		// 	"height": tileHeight,
-		// 	"width": tileWidth,
-		// 	"float": "left",
-		// 	"opacity": "1",
-		// 	"transition": "opacity 0.2s"
-		// }];
-
 		var tileCSS = {
-			"background-color" : "#030301",
+			"background-color" : "#020910",
 			"height": tileHeight,
 			"width": tileWidth,
 			"float": "left",
 			"opacity": "1",
-			"transition": "opacity 0.2s"
 		};
 
 		var zIndex = this.css('z-index') + 1;
@@ -88,7 +59,7 @@
 				$("." + tileToRemove.attr("class")).css({"opacity": "0"});
 				setTimeout(function(){
 					update();
-				},75);
+				},60);
 			})();
 
 			function cleanUp(){
