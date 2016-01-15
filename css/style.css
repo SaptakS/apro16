@@ -562,7 +562,8 @@ body.not-ready {overflow-y:hidden;}
 ******************** law 2
 *************************/
 #contact {
-  background:url(../images/2-bg.png) top left;
+  /*background:url(../images/2-bg.png) top left;*/
+  background-color: #020910;
 }
 
 

@@ -95,7 +95,7 @@
 					// the characters we will be working on at once
 
 					if( i < start+options.step){
-						// Generate a random character at thsi position
+						// Generate a random character at this position
 						strCopy[letters[i]] = randomChar(types[letters[i]]);
 					}
 					else {
@@ -125,8 +125,8 @@
 			pool = ",.?/\\(+-=@~²^)![]{}*&^%$#'\"";
 		}
 		else if (type == "upperLetter"){
-			//pool = "ABCDEFJHIJKLMNOPQRSTUVWXYZ";
-			pool = ",.?/\\(+-=@~²^)![]{}*&^%$#'\"";
+			pool = "ABCDEFJHIJKLMNOPQRSTUVWXYZ";
+			// pool = ",.?/\\(+-=@~²^)![]{}*&^%$#'\"";
 		}
 		else if (type == "symbol"){
 			pool = ",.?/\\(+-=@~²^)![]{}*&^%$#'\"";
@@ -137,3 +137,12 @@
 	}
 
 })(jQuery);
+
+// var tileCSS = {
+		// 	"background" : "url('images/2-bg.png') repeat",
+		// 	"height": tileHeight,
+		// 	"width": tileWidth,
+		// 	"float": "left",
+		// 	"opacity": "1",
+		// 	"transition": "opacity 0.2s"
+		// };

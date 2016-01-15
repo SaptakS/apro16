@@ -219,23 +219,20 @@ $(document).ready(function() {
 
     // anim intro
     var animIntroduction = window.animIntroduction = function(){
-        $introH1.delay(
-            250
-            ).queue(function(){
+            $introH1.delay(250).queue(function(){
                 $introH1.shuffleLetters({
                     "text": $(this).attr("data-title"),
                     "type": "symbol",
                     "step": 20,
                     "fps": 40
                 });
-                $introStroke.addClass('anim');
+            $introStroke.addClass('anim');
         });
 
         $introH2.delay(
             1000
             ).queue(function(next){
                 $introH2.shuffleLetters({
-                    "text": $(this).attr("data-title"),
                     "type": "symbol",
                     "step": 30,
                     "fps": 40
