@@ -8,6 +8,12 @@
     <link href="css/animation.css" rel="stylesheet" media="screen">
     <link href="css/style.css" rel="stylesheet" media="screen">
     <link href="css/contact.css" rel="stylesheet" media="screen">
+<<<<<<< HEAD
+=======
+ <link rel="stylesheet" type="text/css" href="css/gallery.css" />
+        <script type="text/javascript" src="js/modernizr.custom.53451.js"></script>
+   
+>>>>>>> 3be0c1ec4472952b2c680ef48a646c460daa9fe2
 
     <!-- mobile -->
     <meta name="viewport" content="initial-scale=1.0">
@@ -88,12 +94,30 @@
             <div class="shadow-law"></div>
             <article class="article-law">
                 <h1>Previous Year</h1>
-                <p>Un <span class="text-robot">robot</span> <span class="text-design"></span> doit protéger son existence tant que
-                <br class="desk-only">cette protection n'entre pas en conflit avec
-                <br class="desk-only">la Première ou la Deuxième loi</p>
-            </article>
+                <section id="dg-container" class="dg-container">
+                <div class="dg-wrapper">
+                    <a><img src="images/1.jpg" alt="image01"><div>AI POD</div></a>
+                    <a class="dg-next"><img src="images/2.jpg" alt="image02"><div>GAMERS' ASYLUM</div></a>
+                    <a><img src="images/3.jpg" alt="image03"><div>DR. ANIRUDH TECHTALK</div></a>
+                    <a><img src="images/4.jpg" alt="image04"><div>TECHTALK</div></a>
+                    <a><img src="images/5.jpg" alt="image05"><div>BOLT</div></a>
+                    <a><img src="images/6.jpg" alt="image06"><div>BOLT</div></a>
+                    <a><img src="images/7.jpg" alt="image07"><div>THOUGHT BAZAAR</div></a>
+                    <a><img src="images/8.jpg" alt="image08"><div>IT QUIZ</div></a>
+                    <a><img src="images/9.jpg" alt="image09"><div>C FRESH</div></a>
+                    <a><img src="images/10.jpg" alt="image10"><div>GDG TALK</div></a>
+                    <a><img src="images/11.jpg" alt="image11"><div>NUVISION</div></a>
+                    <a><img src="images/12.jpg" alt="image12"><div>WOLF OF 2311</div></a>
+                    <a><img src="images/13.jpg" alt="image13"><div>RIDDLONICS</div></a>
+                    <a><img src="images/14.jpg" alt="image14"><div>WOLF OF 2311</div></a>
+                    <a><img src="images/15.jpg" alt="image15"><div>XPLORER</div></a>
+                </div>
+                <nav style="position:relative; top:40%;">   
+                    <span class="dg-prev">&lt;</span>
+                    <span class="dg-next">&gt;</span>
+                </nav>
+            </section></article>
         </section>
-
         <!-- 3 -->
         <section id="contact" class="fullHeight bbox">
             <div class="roue-law-2">
@@ -335,7 +359,13 @@
     <!-- script -->
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
-
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.gallery.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $('#dg-container').gallery();
+            });
+        </script>
     <script src="js/waypoints.min.js"></script>
     <script src="js/jquery.window.min.js"></script>
     <script src="js/jquery.shuffleLetters.js"></script>
