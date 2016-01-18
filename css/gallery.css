@@ -79,3 +79,16 @@
 	background-position: top right;
 	margin-left: 10px;
 }
+
+@media only screen and (max-width: 500px) {
+	.dg-container nav {
+		left: 45%;
+	}
+
+	.dg-wrapper a {
+		left: -42px;
+	}
+	.dg-wrapper a img {
+		width: 467px;
+	}
+}
